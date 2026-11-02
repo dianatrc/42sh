@@ -3,6 +3,7 @@
 
 ## Key Features and Evolution
 **Foundation** (Inherited from Minishell - Individual Project)
+(You can check my individual implementation in the `Minishell GitHub Repository`: [https://github.com/dianatrc/minishell])
 - **PATH Resolution:** Automatically searches and executes binaries located within system directories defined in the `PATH` environment variable or via absolute/relative paths.
 - **Environment Management:** Copies and safely restores the initial environment so that modifications do not affect the original env variable.
 - **Core Built-in Commands:**
