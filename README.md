@@ -2,8 +2,7 @@
 42sh is a modular, custom Unix command-line interpreter developed in **C** as a team project at EPITECH Paris. Built as an evolution of our preliminary **minishell** project, **42sh** mimics key mechanisms, syntax, and built-in behaviors of standard shells - specifically taking inspiration from **'tcsh'**.
 
 ## Key Features and Evolution
-**Foundation** (Inherited from Minishell - Individual Project)
-(You can check my individual implementation in the `Minishell GitHub Repository`: [https://github.com/dianatrc/minishell])
+**Foundation** (Inherited from Minishell - Individual Project) -> You can check my individual implementation in the `Minishell GitHub Repository`: [https://github.com/dianatrc/minishell].
 - **PATH Resolution:** Automatically searches and executes binaries located within system directories defined in the `PATH` environment variable or via absolute/relative paths.
 - **Environment Management:** Copies and safely restores the initial environment so that modifications do not affect the original env variable.
 - **Core Built-in Commands:**
@@ -85,16 +84,16 @@
 ## Individual Contributions
 While 42sh was developed as a group assignment, Minishell was built individually. Across these projects, my core contributions include:
 1. **Custom Interactive Prompt**
-- **Dynamic Formatting:** Displays a dynamic prompt, similar to `tcsh`, by showing the username (with capitalized first letter) and the current working directory with shortcut for home (User:~/path>). 
+    - **Dynamic Formatting:** Displays a dynamic prompt, similar to `tcsh`, by showing the username (with capitalized first letter) and the current working directory with shortcut for home (User:~/path>). 
 
 2. **Alias System `(alias / unalias)`**
-- **Dynamic Command Substitution:** Implemented full alias definition, listing, and removal mechanics matching `tcsh` behavior.
-- **Pre-parsing Expansion:** Designed the expansion layer to process aliases prior to tokenization.
-- **Recursion and Infinite Loop Guard:** Built detection mechanisms to prevent infinite expansion loops during nested or self-referential aliases.
+    - **Dynamic Command Substitution:** Implemented full alias definition, listing, and removal mechanics matching `tcsh` behavior.
+    - **Pre-parsing Expansion:** Designed the expansion layer to process aliases prior to tokenization.
+    - **Recursion and Infinite Loop Guard:** Built detection mechanisms to prevent infinite expansion loops during nested or self-referential aliases.
 
 3. **Parenthese and Subshell Handling `(...)`**
-- **Grammar and Operator Precedence:** Integrated parentheses evaluation into the parser to enforce operator precedence.
-- **Subshell isolation:** Implemented subshell process spawning (`fork()`) to execute commands inside the parenthesized blocks in an isolated environment.
+    - **Grammar and Operator Precedence:** Integrated parentheses evaluation into the parser to enforce operator precedence.
+    - **Subshell isolation:** Implemented subshell process spawning (`fork()`) to execute commands inside the parenthesized blocks in an isolated environment.
 
 ## Error Handling and Robustness
 - **Syntax and Parsing Validation:** Detailed error checking for mismatched quotes, dangling operators (`&&`, `||`, `|`), invalid subshell syntax, and ambiguous redirections.
@@ -102,10 +101,10 @@ While 42sh was developed as a group assignment, Minishell was built individually
 - **Standardized Error Reporting**: Writes all runtime error messages directly to `stderr` and complies with standard exit code (exits with code 84 on critical failures or 0 on success).
 
 ## Compilation and Usage
-**BUILD**
+- **BUILD**
 To compile the `42sh` binary using the provided Makefile, run: make. To clean intermediate or target files:
-- `make clean`    # Removes object files.
-- `make fclean`   # Removes object files and binaries.
-- `make re`       # Clean rebuild.
-**USAGE**
+    - `make clean`    # Removes object files.
+    - `make fclean`   # Removes object files and binaries.
+    - `make re`       # Clean rebuild.
+- **USAGE**
 Run the shell interactively: `./42sh` or execute commands via standard input piping: `echo "(alias ll 'ls -l' && ll) | cat" | ./42sh`
